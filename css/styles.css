@@ -28,7 +28,6 @@ body {
     align-items: center; /* Les éléments portés sont centrés à la verticale */
     width: 100%; /* La page occupe toute la largeur */
 }
-
 header {
     width: 916px; /* Les headers et sections occupent 916px (taille de la bannière) */
     display: flex; /* Ce conteneur est "flexible" */
@@ -129,7 +128,11 @@ h1 {
     color: black; /* Couleur du texte */
     
 }
-
+#fullimage :hover
+{
+     filter: blur(2px);
+     
+}
 #gauche:hover, #milieu:hover, #droite:hover {
     border: black thin solid; /* Bordure au passage de la souris */
     border-radius: 10px; /* Bords arrondis au passage de la souris */
