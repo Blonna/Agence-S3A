@@ -17,7 +17,10 @@ and open the template in the editor.
     text-decoration: none; /* Suppression de la mise en forme habituelle des liens 
                              (soulignement) */
 }
-
+@font-face{ 
+    font-family: "Montserrat";
+    src: url('polices/Montserrat-Regular.ttf') format("truetype");
+}
 body {
     display: flex; /* Ce conteneur est "flexible" */
     justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
@@ -36,7 +39,7 @@ nav ul {
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: row; /* Les éléments sont mis côte à côte */
     justify-content: space-between; /* Les éléments sont répartis équitablement */
-    background-color: black; /* Couleur du fond */
+    background-color: #2C87C7; /* Couleur du fond */
 }
 nav ul li {
     display: flex; /* Ce conteneur est "flexible" */
@@ -51,7 +54,7 @@ nav ul li a {
     color: white; /* Couleur du texte */
 }
 nav ul li:hover {
-    background-color:#9a330a; /* Couleur du fond au passage de la souris */
+    background-color:#279581; /* Couleur du fond au passage de la souris */
 }
 section {
     width: 916px; /* Les sections occupent 916px (taille de la bannière) */
@@ -142,8 +145,8 @@ footer {
     bottom: 0px; /* Bas */
     height: 35px; /* Hauteur */
     width: 100%; /* Le pied de page occupe toute la largeur */ 
-    background-color:#2d2d2d; /* Couleur de fond */
-    color: #bbb; /* Couleur du texte */
+    background-color:#207F99; /* Couleur de fond */
+    color: whitesmoke; /* Couleur du texte */
     text-align:center; /* Texte centré */
 }
 
