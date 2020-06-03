@@ -8,15 +8,6 @@ and open the template in the editor.
     Author     : aleja
 */
 
-* {
-    box-sizing: border-box; /* Les tailles de conteneurs incluent bordures et 
-                               remplissages */
-    margin: 0; /* Mise à 0 des marges externes */
-    padding: 0; /* Mise à 0 des marges internes */
-    text-decoration: none; /* Suppression de la mise en forme habituelle des liens 
-                             (soulignement) */
-}
-
 body {
     display: flex; /* Ce conteneur est "flexible" */
     justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
@@ -25,9 +16,14 @@ body {
     width: 100%; /* La page occupe toute la largeur */
 }
 header {
-    width: 916px; /* Les headers et sections occupent 916px (taille de la bannière) */
+    width: 100%; /* Les headers et sections occupent 916px (taille de la bannière) */
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: column; /* Les éléments sont empilés */
+}
+
+nav {
+    width:100%;
+    font-size:small;
 }
 
 nav ul {
@@ -47,12 +43,13 @@ nav ul li {
 nav ul li a {
     padding: 10px; /* Marge intérieure */
     color: white; /* Couleur du texte */
+    text-decoration: none;
 }
 nav ul li:hover {
     background-color:#279581; /* Couleur du fond au passage de la souris */
 }
 section {
-    width: 916px; /* Les sections occupent 916px (taille de la bannière) */
+    width: 100%; /* Les sections occupent 916px (taille de la bannière) */
 }
 
 #principal {
@@ -77,7 +74,6 @@ section {
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: column; /* Les éléments sont empilés */
     margin-left: 16px; /* Marge de gauche */
-    width: 238px; /* Largeur du conteneur (taille de l'image de fond) */
     background: aqua;/* Fond */
     font-size: small; /* Le texte est réduit en S */
     font-weight: bold; /* Le texte est mis en gras */
@@ -122,6 +118,10 @@ h1 {
     font-size: xx-large; /* Le texte est grossi en XXL */
     color: black; /* Couleur du texte */
     
+}
+
+#fullimage img{
+     width:100%;
 }
 #fullimage :hover
 {
