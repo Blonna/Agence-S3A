@@ -10,5 +10,21 @@ and open the template in the editor.
 
 #carto h1
 {
-   justify-content: center;
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    text-decoration: underline;
+    color: blue;
+    margin-top:5%;
+    margin-left: 50%;
+}
+
+#carto img
+{
+    display:flex;
+    flex-direction:row;
+    margin-top: 5%;
+    margin-left:50%;
+    width: 50%;
 }
