@@ -40,14 +40,14 @@ header {
 
 nav {
     width:100%;
-    font-size:small;
+    font-size:30px;
 }
 
 nav ul {
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: row; /* Les éléments sont mis côte à côte */
     justify-content: space-between; /* Les éléments sont répartis équitablement */
-    background-color: #2C87C7; /* Couleur du fond */
+    background-color: #24396B; /* Couleur du fond */
 }
 nav ul li {
     display: flex; /* Ce conteneur est "flexible" */
@@ -63,9 +63,15 @@ nav ul li a {
     text-decoration: none;
 }
 nav ul li:hover {
-    background-color:#279581; /* Couleur du fond au passage de la souris */
+    background-color:#214C54; /* Couleur du fond au passage de la souris */
     transform: scale(1.05);
     box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+    border-radius: 16px;
+}
+@media screen and (min-width: 576px){
+input[type="checkbox"]{
+    display: none;
+} 
 }
 section {
     width: 100%; /* Les sections occupent 916px (taille de la bannière) */
@@ -200,7 +206,7 @@ footer a{
         position: absolute;
         margin: -39px 0 0 -60px;
         padding: 50px 10px 10px 60px;
-        background: black;
+        background: #24396B;
         list-style-type: none;
         transform: translate(-100%, 0);
         transition: transform 0.5s ease;
