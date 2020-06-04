@@ -31,7 +31,9 @@ body {
     flex-direction: column; /* Les éléments sont empilés */
     align-items: center; /* Les éléments portés sont centrés à la verticale */
     width: 100%; /* La page occupe toute la largeur */
+   
 }
+   
 header {
     width: 100%; 
     display: flex; /* Ce conteneur est "flexible" */
@@ -204,9 +206,7 @@ footer a{
 
     #principal aside {display: none;}
 
-    h1 {
-        font-size: x-large;
-    }
+ 
 
     #thematique {   
         flex-direction: column;

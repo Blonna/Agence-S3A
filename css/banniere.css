@@ -7,6 +7,13 @@ and open the template in the editor.
     Created on : 3 jun. 2020, 11:50:53
     Author     : aleja
 */
+h1 {
+        font-size: 40px;
+        font-family: Montserrat;
+        color: #1C1199;
+        margin-top:40px;
+        margin-bottom: 40px;
+    }
 .content
 {
     max-width: 1300px; /*Largeur du conteneur */
@@ -114,6 +121,7 @@ article.item img
    opacity: 0;
  
 }
+
 #fermer:checked+label,#fermer:checked~.popup
 {
  
