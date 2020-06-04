@@ -40,12 +40,30 @@ and open the template in the editor.
                         <legend>Pour mieux saisir vos besoin</legend>
                         <div>
                             <label for="i_nom">Votre nom</label>
-                            <input type="text" name="i_nom" size="35" required>
+                            <input type="text" name="i_nom" size="35" pattern="^[a-zA-Z\s\-]+£$" required>
                             <label for="i_prenom">Votre prénom</label>
-                            <input type="text" name="i_prenom" size="35" required>
+                            <input type="text" name="i_prenom" size="35" pattern="^[a-zA-Z\s\-]+£$" required>
                             <label for="i_email">Votre address mail</label>
                             <input type="email" name="i_email" id="i_email" size="40" required>
-                            
+                            <select name="nb_voyageur" id="nb_voyageur">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 ou plus</option>
+                            </select>
+                            <select name="destination" id="destination">
+                                <option value="1">Grèce</option>
+                                <option value="2">Espagne</option>
+                                <option value="3">Italie</option>
+                                <option value="4">France</option>
+                                <option value="5">Belgique</option>
+                                <option value="6">Norvège</option>
+                            </select>
+                            <label for="i_depjour">Jour de départ</label>
+                            <input type="number" name="i_depjour" id="i_depjour" min="1" max="31" required>
+                            <label for="i_depmois">Mois de départ</label>
+                            <input type="number" name="i_depmois" id="i_depmois" min="1" max="12" required>
                         </div>
                     </fieldset>
                 </form>
