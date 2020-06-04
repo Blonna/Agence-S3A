@@ -33,6 +33,23 @@ and open the template in the editor.
                    <li><a href="nous_contacter.html">Nous contacter</a></li>             
                 </ul>
             </nav>
+            <section id="contact">
+                <h1>Nous contacter</h1>
+                <form name="form_contact" action="http://agnece-s3a.fr/testforms.php" method="POST">
+                    <fieldset id="info">
+                        <legend>Pour mieux saisir vos besoin</legend>
+                        <div>
+                            <label for="i_nom">Votre nom</label>
+                            <input type="text" name="i_nom" size="35" required>
+                            <label for="i_prenom">Votre prénom</label>
+                            <input type="text" name="i_prenom" size="35" required>
+                            <label for="i_email">Votre address mail</label>
+                            <input type="email" name="i_email" id="i_email" size="40" required>
+                            
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
             <section id="carto">
             <h1>Nous localiser :</h1>
             <img src="https://open.mapquestapi.com/staticmap/v5/map?key=WNRNWPl5QZOddGxrmbeKC2co7DJ99NOd &locations=Toulon,Var,France"
