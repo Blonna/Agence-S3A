@@ -7,7 +7,62 @@ and open the template in the editor.
     Created on : 3 jun. 2020, 11:50:53
     Author     : aleja
 */
+.content
+{
+    max-width: 1300px;
+    width:100%;
+    height:auto;    
+    padding:20px;	
+    background:#A8EDDB;
+    margin: 0 auto;
+    display: row;
+    margin-bottom: 80px;
+    align-items: center;
+}
+.content before,
+.content after
+{
+    content: "";
+    display: block;
+    clear:both;
+}
+article.item 
+{
+    padding: 5px;
+    width: 310px;
+    height: 530px;
+    margin: 0 5px 5px 0;
+    float: left;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    transition: box-shadow 2s,transform 500ms, filter 500ms ease-in-out;
+    border-radius: 6px;
+  }
+ article.item:hover
+ {
+transform: scale(1.05);
+box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+} 
 
+article.blur
+{
+filter: blur(2px);
+transform: scale(0.95);
+}
+article.item img 
+{
+     width: 300px;
+    height: 520px;
+    border-radius: 6px;
+    
+}
+#fullimage img{
+     width:100%;
+}
+#fullimage :hover
+{
+     filter: blur(2px);
+     
+}
 
 
 

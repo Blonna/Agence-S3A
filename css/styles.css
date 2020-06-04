@@ -113,9 +113,12 @@ section {
 }
 
 h1 {
-    color: #ff6811; /* Couleur du texte */
+    font-family: 'Montserrat';
+    color: #1C1199; /* Couleur du texte */
     text-align: center; /* Le texte est centré */
     font-size: xx-large; /* Le texte est grossi en XXL */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #thematique h1 {
@@ -137,14 +140,6 @@ h1 {
     
 }
 
-#fullimage img{
-     width:100%;
-}
-#fullimage :hover
-{
-     filter: blur(2px);
-     
-}
 #gauche:hover, #milieu:hover, #droite:hover {
     border: black thin solid; /* Bordure au passage de la souris */
     border-radius: 10px; /* Bords arrondis au passage de la souris */
