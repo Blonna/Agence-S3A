@@ -39,10 +39,7 @@ body {
     margin-left:25%;
 }
 
-#contact h1
-{
-   
-}
+
 
 #page{
     background:#A8EDDB;
@@ -85,6 +82,8 @@ label{
   padding: 12px 12px 12px 0;
   overflow:hidden;
   display: inline-block;
+  width: 50%;
+  margin-left:25%;
   
 }
 
@@ -95,19 +94,45 @@ input[type=text],textarea,email,number,month{
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  width: 50%;
+  margin-left:25%;
 }
 
 
 @media screen and (max-width:576px){
+
     label{
-      font-size:medium;  
+      width:50%;
+      font-size:medium; 
+      justify-content: center;
+      margin:0;
+      padding:0;
     }
-    
+    input{
+        width:50%;
+    }
+    form{
+        justify-content: center;
+        width:100%;
+        margin:0;
+        padding:0;
+    }
     legend{
         font-size:medium;
-    }
-    legend{
         width:100%;
         justify-content:center;
+        margin:0;
+        padding:0;
+    }
+    #titre{
+    font-size:medium;
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    text-decoration: underline;
+    color: #1C1199;
+    margin-top:0;
+    margin-left:0;
     }
 }
