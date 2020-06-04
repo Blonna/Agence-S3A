@@ -33,7 +33,7 @@ body {
     width: 100%; /* La page occupe toute la largeur */
 }
 header {
-    width: 100%; /* Les headers et sections occupent 916px (taille de la bannière) */
+    width: 100%; 
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: column; /* Les éléments sont empilés */
 }
@@ -72,81 +72,6 @@ nav ul li:hover {
 input[type="checkbox"]{
     display: none;
 } 
-}
-section {
-    width: 100%; /* Les sections occupent 916px (taille de la bannière) */
-}
-
-#principal {
-    margin-top: 10px; /* Marge supérieure */
-    display: flex; /* Ce conteneur est "flexible" */
-    flex-direction: row; /* Les éléments sont mis côte à côte */
-    text-align: justify; /* Alignement du texte : justifié */
-}
-#principal article {
-    flex: 1; /* Écriture raccourcie : 
-                flex-grow: 1 et flex-shrink:1 = Chaque élément occupe l'espace idéal 
-                (le + et le - à la fois) */
-}
-#principal article img {
-    float: left; /* Mise en élément "flottant" contre lequel on peut venir se poser */
-    margin-right: 10px; /* Marge de droite */
-}
-#principal article p {
-    padding-top: 16px; /* Marge intérieure supérieure */
-}
-#principal aside {
-    display: flex; /* Ce conteneur est "flexible" */
-    flex-direction: column; /* Les éléments sont empilés */
-    margin-left: 16px; /* Marge de gauche */
-    background: aqua;/* Fond */
-    font-size: small; /* Le texte est réduit en S */
-    font-weight: bold; /* Le texte est mis en gras */
-    padding-left: 35px; /* Marge intérieure gauche */
-    padding-bottom: 60px; /* Marge intérieure basse */
-}
-#principal aside img:first-child{
-    margin-top: 110px; /* Marge supérieure du premier élément qui est une image  */
-}
-#principal aside img {
-    align-self: center; /* Placement au centre */
-}
-#principal aside img:nth-child(3){
-    margin-top: 20px; /* Marge supérieure du troisième élément qui est une image */
-}
-#thematique {
-    display: flex; /* Ce conteneur est "flexible" */
-    flex-wrap: wrap; /* Les éléments sont placés sur plusieurs lignes */
-    margin-bottom: 45px; /* Marge basse (correspond à la hauteur du footer + 10px) */
-}
-
-h1 {
-    font-family: 'Montserrat';
-    color: #1C1199; /* Couleur du texte */
-    text-align: center; /* Le texte est centré */
-    font-size: xx-large; /* Le texte est grossi en XXL */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#thematique h1 {
-    width: 100%; /* Le titre occupe toute la largeur */ 
-    margin-bottom: 10px; /* Marge basse */
-}
-
-#thematique article {
-    flex: 1; /* flex-grow: 1 et flex-shrink:1 = Chaque élément occupe l'espace idéal (le + et le - à la fois) */
-    height: 256px; /* Hauteur */
-    border: transparent thin solid; /* Bordure transparente */
-    display: flex; /* Ce conteneur est "flexible" */
-    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
-}
-
-#thematique a {
-    font-size: xx-large; /* Le texte est grossi en XXL */
-    color: black; /* Couleur du texte */
-    
-}
 
 #gauche:hover, #milieu:hover, #droite:hover {
     border: black thin solid; /* Bordure au passage de la souris */
@@ -296,4 +221,5 @@ footer a{
     footer {
         display: none;
     }
+}
 }
