@@ -206,7 +206,7 @@ footer a{
         position: absolute;
         margin: -39px 0 0 -60px;
         padding: 50px 10px 10px 60px;
-        background: black;
+        background: #24396B;
         list-style-type: none;
         transform: translate(-100%, 0);
         transition: transform 0.5s ease;
@@ -234,7 +234,7 @@ footer a{
         height: 5px;
         margin-bottom: 5px;
         position: relative;
-        background: black;
+        background:#24396B;
         border-radius: 3px;
         z-index: 1; /* En dessous de l'input défini avant */
         /*transform-origin: 4px 0px; /* Modification du centre pour rotation */
