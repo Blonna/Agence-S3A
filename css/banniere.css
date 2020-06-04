@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 jun. 2020, 11:50:53
+    Author     : aleja
+*/
+.content
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#A8EDDB;
+    margin: 0;
+    display: row;
+    margin-bottom: 80px;
+    align-items: center;
+}
+.content before,
+.content after
+{
+    content: "";
+    display: block;
+    clear:both;
+}
+article.item 
+{
+    padding: 0.3%;
+    width: 310px;
+    height: 530px;
+    margin: 0 5px 5px 0;
+    float: left;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    transition: box-shadow 2s,transform 500ms, filter 500ms ease-in-out;
+    border-radius: 6px;
+  }
+ article.item:hover
+ {
+transform: scale(1.05);
+box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+} 
+
+article.blur
+{
+filter: blur(2px);
+transform: scale(0.95);
+}
+article.item img 
+{
+    width: 99%;
+    height: 520px;
+    border-radius: 6px;
+    
+}
+#fullimage img{
+     width: 100%;
+}
+#fullimage :hover
+{
+     filter: blur(2px);
+     
+}
+
+@media screen and (max-width:576px)
+{
+    article.item 
+{
+    padding: 0.3%;
+    width: 100%;
+    height: 530px;
+    margin: 0 0.3% 0.3% 0;
+    float: left;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    transition: box-shadow 2s,transform 500ms, filter 500ms ease-in-out;
+    border-radius: 6px;
+  }
+}
+
+

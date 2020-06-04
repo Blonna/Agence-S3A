@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 * {
-    font-family: 'Montserrat'; /* Police par défaut */
+    font-family: 'LeagueSpartan-Bold';
     box-sizing: border-box; /* Les tailles de conteneurs incluent bordures et 
                                remplissages */
     margin: 0; /* Mise à 0 des marges externes */
@@ -17,7 +17,14 @@ and open the template in the editor.
     text-decoration: none; /* Suppression de la mise en forme habituelle des liens 
                              (soulignement) */
 }
-
+@font-face{ 
+    font-family: "Montserrat";
+    src: url('polices/Montserrat-Regular.ttf') format("truetype");
+}
+@font-face{ 
+    font-family: "LeagueSpartan-Bold";
+    src: url('polices/LeagueSpartan-Bold.otf') format("truetype");
+}
 body {
     display: flex; /* Ce conteneur est "flexible" */
     justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
@@ -25,18 +32,22 @@ body {
     align-items: center; /* Les éléments portés sont centrés à la verticale */
     width: 100%; /* La page occupe toute la largeur */
 }
-
 header {
-    width: 916px; /* Les headers et sections occupent 916px (taille de la bannière) */
+    width: 100%; /* Les headers et sections occupent 916px (taille de la bannière) */
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: column; /* Les éléments sont empilés */
+}
+
+nav {
+    width:100%;
+    font-size:30px;
 }
 
 nav ul {
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: row; /* Les éléments sont mis côte à côte */
     justify-content: space-between; /* Les éléments sont répartis équitablement */
-    background-color: black; /* Couleur du fond */
+    background-color: #24396B; /* Couleur du fond */
 }
 nav ul li {
     display: flex; /* Ce conteneur est "flexible" */
@@ -49,12 +60,21 @@ nav ul li {
 nav ul li a {
     padding: 10px; /* Marge intérieure */
     color: white; /* Couleur du texte */
+    text-decoration: none;
 }
 nav ul li:hover {
-    background-color:#9a330a; /* Couleur du fond au passage de la souris */
+    background-color:#214C54; /* Couleur du fond au passage de la souris */
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+    border-radius: 16px;
+}
+@media screen and (min-width: 576px){
+input[type="checkbox"]{
+    display: none;
+} 
 }
 section {
-    width: 916px; /* Les sections occupent 916px (taille de la bannière) */
+    width: 100%; /* Les sections occupent 916px (taille de la bannière) */
 }
 
 #principal {
@@ -79,7 +99,6 @@ section {
     display: flex; /* Ce conteneur est "flexible" */
     flex-direction: column; /* Les éléments sont empilés */
     margin-left: 16px; /* Marge de gauche */
-    width: 238px; /* Largeur du conteneur (taille de l'image de fond) */
     background: aqua;/* Fond */
     font-size: small; /* Le texte est réduit en S */
     font-weight: bold; /* Le texte est mis en gras */
@@ -102,9 +121,12 @@ section {
 }
 
 h1 {
-    color: #ff6811; /* Couleur du texte */
+    font-family: 'Montserrat';
+    color: #1C1199; /* Couleur du texte */
     text-align: center; /* Le texte est centré */
     font-size: xx-large; /* Le texte est grossi en XXL */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #thematique h1 {
@@ -121,7 +143,6 @@ h1 {
 }
 
 #thematique a {
-    font-family: 'Nordic'; /* Police à utiliser */
     font-size: xx-large; /* Le texte est grossi en XXL */
     color: black; /* Couleur du texte */
     
@@ -142,16 +163,137 @@ footer {
     bottom: 0px; /* Bas */
     height: 35px; /* Hauteur */
     width: 100%; /* Le pied de page occupe toute la largeur */ 
-    background-color:#2d2d2d; /* Couleur de fond */
-    color: #bbb; /* Couleur du texte */
+    background-color:#207F99; /* Couleur de fond */
+    color: whitesmoke; /* Couleur du texte */
     text-align:center; /* Texte centré */
 }
 
 footer p {
-    font-size: large; /* Le texte est grossi en L */
+    font-size: small; /* Le texte est grossi en L */
 }
 
 footer a{
     color: inherit; /* Couleur du lien identique à celle du conteneur */
 }
 
+@media screen and (max-width:576px) {
+    body {
+        font-size: large;
+    }
+    
+    header, section {
+        width: auto; /* Suppression de la largeur définie */
+    }
+    
+    header img {
+        width: 100%; /* Bannière sur toute la largeur */
+        background-color: black; /* Extension artificielle noire */
+        padding-bottom: 15px; /* du bas de l'image sur 15 pixels */
+    }
+
+    nav {
+        /*display: block;*/
+        position: relative;
+        top: 7px;
+        left: 7px;
+        z-index: 1;
+    }
+
+    nav ul {
+        display: flex; /* Ce conteneur est "flexible" */
+        flex-direction: column; /* Les éléments sont mis côte à côte */
+        align-items: flex-start; /* Alignement sur la gauche */
+        position: absolute;
+        margin: -39px 0 0 -60px;
+        padding: 50px 10px 10px 60px;
+        background: black;
+        list-style-type: none;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s ease;
+    }
+
+    nav ul li {
+        display: list-item;
+        padding: 10px 0;
+        width: 100%;
+        font-size:large;
+    }
+
+    
+    nav input {
+        display: block; /* Affichage de l'input pour pouvoir cliquez dessus */
+        position: absolute;
+        opacity: 0; /* input transparent */
+        z-index: 2; /* On le place au-dessus du bouton de menu (hamburger) */
+    }
+
+    /* Création artificielle de l'icone de menu (hamburger) */
+    nav span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        background: black;
+        border-radius: 3px;
+        z-index: 1; /* En dessous de l'input défini avant */
+        /*transform-origin: 4px 0px; /* Modification du centre pour rotation */
+        transition: transform 0.5s ease, background 0.5s ease, opacity 0.55s ease;
+    }
+
+    /* Toutes les barres en blanc */
+    nav input:checked ~ span {
+        background: aqua;
+    }
+
+    /* On fait pivoter la première de 45° (sens horaire) */
+    nav input:checked ~ span:nth-child(2) {
+        transform: rotate(45deg) translate(7px, 5px);
+    }
+
+    /* On fait pivoter la dernière de 45° (sens anti-horaire) */
+    nav input:checked ~ span:nth-child(4) {
+        transform: rotate(-45deg) translate(10px, -6px);
+    }
+
+    /* On cache la barre du milieu */
+    nav input:checked ~ span:nth-child(3) {
+        opacity: 0; 
+    }
+
+    /* On annule la translation vers la gauche qui a caché le menu */
+    nav input:checked ~ ul {
+        transform: none;
+    }
+
+    #principal {
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    #principal article img {
+        float: left;
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+
+    #principal aside {display: none;}
+
+    h1 {
+        font-size: x-large;
+    }
+
+    #thematique {   
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    #gauche, #milieu, #droite {
+        background-size: contain;
+        background: none;
+    }
+    
+    footer {
+        display: none;
+    }
+}
