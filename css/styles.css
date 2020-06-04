@@ -64,6 +64,8 @@ nav ul li a {
 }
 nav ul li:hover {
     background-color:#279581; /* Couleur du fond au passage de la souris */
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
 }
 section {
     width: 100%; /* Les sections occupent 916px (taille de la bannière) */
