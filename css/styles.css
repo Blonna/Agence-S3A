@@ -73,7 +73,8 @@ nav ul li:hover {
 @media screen and (min-width: 576px){
 input[type="checkbox"]{
     display: none;
-} 
+}
+}
 
 #gauche:hover, #milieu:hover, #droite:hover {
     border: black thin solid; /* Bordure au passage de la souris */
@@ -221,5 +222,4 @@ footer a{
     footer {
         display: none;
     }
-}
 }

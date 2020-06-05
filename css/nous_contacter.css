@@ -34,19 +34,105 @@ body {
 {
     display:flex;
     flex-direction:row;
-    margin-top: 5%;
-    margin-left:50%;
+    justify-content: center;
     width: 50%;
+    margin-left:25%;
 }
 
-#contact h1
-{
+
+
+#page{
+    background:#A8EDDB;
+    width:100%;
+}
+
+#titre{
     display: flex; /* Ce conteneur est "flexible" */
     justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
     flex-direction: column; /* Les éléments sont empilés */
     align-items: center; /* Les éléments portés sont centrés à la verticale */
     text-decoration: underline;
-    color: orange;
-    margin-top:5%;
-    margin-right: 50%;
+    color: #1C1199;
+    margin-top:0;
+    margin-left:0;
+}
+
+#contact div{
+    justify-content: center;
+    margin:5px;
+    color:black;
+    flex-direction: column; 
+    width:100%
+}
+#info {
+    margin:1px;
+}
+
+#carto h1{
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    text-decoration: underline;
+    color: #1C1199;
+    margin-top:0;
+    margin-left:0;
+}
+label{
+  padding: 12px 12px 12px 0;
+  overflow:hidden;
+  display: inline-block;
+  width: 50%;
+  margin-left:25%;
+  
+}
+
+input[type=text],textarea,email,number,month{
+  width: 99%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  width: 50%;
+  margin-left:25%;
+}
+
+
+@media screen and (max-width:576px){
+
+    label{
+      width:50%;
+      font-size:medium; 
+      justify-content: center;
+      margin:0;
+      padding:0;
+    }
+    input{
+        width:50%;
+    }
+    form{
+        justify-content: center;
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+    legend{
+        font-size:medium;
+        width:100%;
+        justify-content:center;
+        margin:0;
+        padding:0;
+    }
+    #titre{
+    font-size:medium;
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    text-decoration: underline;
+    color: #1C1199;
+    margin-top:0;
+    margin-left:0;
+    }
 }
