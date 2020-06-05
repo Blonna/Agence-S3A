@@ -14,6 +14,7 @@ and open the template in the editor.
        <link rel="icon" href="../icon.ico">
        <link href="../css/banniere.css" rel="stylesheet" type="text/css"/>
        <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+       <link href="../css/recherche.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         
@@ -37,9 +38,15 @@ and open the template in the editor.
                 </ul>
             </nav>
             </div>
-        
+       <div id="reservation" class="section">
+       <div class="section-centrale">
+       <div class="contenu">
+       <div class="rangée">
+       <div class="formulaire">
         <form>
-            <div>
+           
+            <div class="formulaire-groupé">
+            <div class="formulaire-case">
             <label for="Aller">
             <input type="radio" id="Aller" name="Aller">
             <span></span>Aller simple
@@ -49,7 +56,7 @@ and open the template in the editor.
             <input type="radio" id="Aller" name="Aller">
             <span></span>Aller-retour
             </label>
-            
+                
             <label for="civilité">
             <input type="radio" id="civilité" name="civilité">
             <span></span>Mr
@@ -65,8 +72,12 @@ and open the template in the editor.
             <span></span>Enfant
             </label>
             </div>
-            <div>
-            <span>Départ de</span>
+            </div>
+
+            <div class="rangée">
+            <div class="col-md-6">
+            <div class="formulaire-groupé">
+            <span class="étiquette-formu">Départ de</span>           
         <select>
             <option>Athénes</option>
             <option>Barcelone</option>
@@ -77,8 +88,12 @@ and open the template in the editor.
             <option>Marseille</option>          
             <option>Nice</option>
             <option>Rome</option>                   
-        </select>          
-            <span>Arrivée à</span>
+        </select>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <div class="formulaire-groupé">
+            <span class="étiquette-formu">Arrivée à</span>
         <select>
             <option>Athénes</option>
             <option>Barcelone</option>
@@ -91,40 +106,68 @@ and open the template in the editor.
             <option>Rome</option>
         </select>
             </div>
-            <div>
-            <span>Date de départ</span>
+            </div>
+            </div>
+            
+            <div class="rangée">
+            <div class="col-md-3">
+            <div class="formulaire-groupé">
+                
+            <span class="étiquette-formu">Date de départ</span>
             <input type="date" required>
-            <span>Date de retour</span>
+            <span class="étiquette-formu">Date de retour</span>
             <input type="date" required>
             </div>
-            <div>
-            <span>Adulte(s) (18+)</span>           
-         <select>
+            </div>
+            
+            <div class="col-md-2">
+            <div class="formulaire-groupé">
+              <span class="étiquette-formu">Adulte(s) (18+)</span>  
+         <select class="controle-de-form">
             <option>1</option>
             <option>2</option>
             <option>3</option>
         </select>
-                       
-            <span>Enfant(s) (0-17)</span>          
-        <select>
+            <span class="fléche-selecte"></span>
+            </div>
+            </div>
+            <div class="col-md-2">
+            <div class="formulaire-groupé">
+            <span class="étiquette-formu">Enfant(s) (0-17)</span>          
+        <select class="controle-de-form">
             <option>0</option>
             <option>1</option>
             <option>2</option>
         </select>
+            <span class="fléche-selecte"></span>
             </div>
-            <div>
-            <span>Classes</span>           
-        <select>
+            </div>
+            </div>
+            <div class="rangée">
+            <div class="col-md-3">
+            <div class="formulaire-groupé">
+            <span class="étiquette-formu">Classes</span>           
+        <select class="controle-de-form">
             <option>Première classe</option>
             <option>Classe affaire</option>
             <option>Classe économique</option>
         </select>
-            </div> 
-            <div>
-            <button>Reservation</button>
+            <span class="fléche-selecte"></span>
+            </div>
+            </div>
+                
+            <div class="col-md-3">
+            <div class="form-btn">
+            <button class="submit-btn">Reservation</button>
+            </div>
+            </div>
             </div>
         </form>
-
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
             <footer>
             <p>&copy;2020 S3A - Créé par <a href="mailto:antoine.blonna@isen.yncrea.fr">Antoine BLONNA-Adam BEN HASSINE-Sheridan MAMFOUMBI-Alejandra MENDEZ </a><p>
         </footer>

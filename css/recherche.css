@@ -8,3 +8,108 @@ and open the template in the editor.
     Author     : aleja
 */
 
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.étiquette-formu{
+    color: #fff;
+}
+
+.section .section-centrale {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#reservation {
+	font-family: 'PT Sans', sans-serif;
+	background-image: url('../images/depart.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.formulaire {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 40px;
+	border-radius: 6px;
+}
+
+.formulaire .formulaire-groupé {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.formulaire select.controle-de_form {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.formulaire select.controle-de_form+.fléche-select {
+	position: absolute;
+	right: 10px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+}
+
+.formulaire select.controle-de_form+.fléche-select:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.formulaire .étiquette-form {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 24px;
+	height: 24px;
+	font-size: 12px;
+	color: #fff;
+}
+
+
+.formulaire .formulaire-case label {
+	position: relative;
+	padding-top: 4px;
+	padding-left: 30px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.formulaire .form-btn {
+	margin-top: 27px;
+}
+
+.formulaire .submit-btn {
+	color: #fff;
+	background-color: #f23e3e;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.formulaire .submit-btn:hover,
+.formulaire .submit-btn:focus {
+	opacity: 0.9;
+}
