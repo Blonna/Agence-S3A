@@ -44,6 +44,7 @@ body {
 #page{
     background:#A8EDDB;
     width:100%;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
 }
 
 #titre{
@@ -61,8 +62,25 @@ body {
     justify-content: center;
     margin:5px;
     color:black;
-    flex-direction: column; 
+    flex-direction: row; 
     width:100%
+}
+#contact 
+{
+    display: flex;
+    justify-content: center;
+    margin:5px;
+    color:black;
+    flex-direction: column; 
+    font-size: 25px;
+    background-color: aliceblue;
+    
+}
+#contact h1
+{
+    text-align: center;
+    font-size: 30px;
+    background-color: bisque;
 }
 #info {
     margin:1px;
@@ -78,17 +96,30 @@ body {
     margin-top:0;
     margin-left:0;
 }
-label{
+label
+{
   padding: 12px 12px 12px 0;
   overflow:hidden;
-  display: inline-block;
+  display: flex;
   width: 50%;
   margin-left:25%;
+  font-family:Montserrat;
+  text-align: left;
+  font-size: 18px;
   
 }
+span
+{
+   display: flex;
+  width: 50%;
+  margin-left:25%;
+  font-family:Montserrat;
+  font-size: 18px;
+}
 
-input[type=text],textarea,email,number,month{
-  width: 99%;
+
+input[type=text],textarea{
+  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -97,11 +128,54 @@ input[type=text],textarea,email,number,month{
   width: 50%;
   margin-left:25%;
 }
-input[type=email]{
+input[type=email]
+{
     margin-left:25%;
+    border: 1px solid #ccc;
+    width: 50%;
+    border-radius: 6px;
+    padding: 12px;
+    
 }
-
-
+input[type=email]
+{
+    margin-left:25%;
+    border: 1px solid #ccc;
+    width: 50%;
+    border-radius: 6px;
+    padding: 12px;
+    
+}
+#comment
+{
+ font-family: Montserrat;
+}
+#daterdv
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    width: 50%;
+    margin-left:25%;
+    font-family: Montserrat;
+}
+#btn_envoyer
+{
+    font-size: 20px;
+    height: 50px;
+    background-color:cadetblue;
+    border-bottom-color: aliceblue;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: Montserrat;
+    padding: 12px;   
+    color: aliceblue;
+    margin-left: 600px;
+    
+}
 @media screen and (max-width:576px){
 
     label{
