@@ -97,6 +97,9 @@ input[type=text],textarea,email,number,month{
   width: 50%;
   margin-left:25%;
 }
+input[type=email]{
+    margin-left:25%;
+}
 
 
 @media screen and (max-width:576px){
