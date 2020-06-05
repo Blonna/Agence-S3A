@@ -7,4 +7,37 @@ and open the template in the editor.
     Created on : 3 jun. 2020, 9:18:52
     Author     : aleja
 */
+#hotel
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#A8EDDB;
+    margin: 0;
+    display: row;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+article.stuff img 
+{
+    width: 99%;
+    height: 300px;
+    border-radius: 6px;
+    
+}
+
+article.stuff 
+{
+    padding: 0.3%;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    margin: 0 5px 5px 0;
+    float: left;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    transition: box-shadow 2s,transform 500ms, filter 500ms ease-in-out;
+    border-radius: 6px;
+  }
 
