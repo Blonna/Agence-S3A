@@ -369,7 +369,15 @@ article.item img
     transition: box-shadow 2s,transform 500ms, filter 500ms ease-in-out;
     border-radius: 6px;
   }
-  
+  .popup{
+    display:none;
+  }
+  fermer{
+      display: none;
+  }
+  #fermer + label{
+      display:none;
+  }
   
 }
 
