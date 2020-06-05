@@ -229,4 +229,41 @@ footer a{
     footer {
         display: none;
     }
+    .annonce h3{
+        font-size: 30px;
+    }
+    
+    .fondations{
+        margin:0;
+        width:100%;
+        flex-direction: column;
+    }
+    
+    .section h2 {
+        margin-left:0;
+        margin-top: 0;
+        font-size: medium;
+        font-family: Montserrat;
+        color: #1C1199;
+        text-align: center;
+    }
+    .section h3 {
+        margin-left:0;
+        margin-top: 0;
+        font-size: medium;
+        font-family: Montserrat;
+        color: #25417D;
+        text-align: center;
+    }
+    
+    .section p{
+        margin-left:0;
+        margin-top: 100px;
+        font-size: medium;
+        font-family: Montserrat;
+        color: #244B66;
+        text-align: center;
+        margin-bottom: 100px;
+        
+    }
 }
