@@ -113,3 +113,9 @@ and open the template in the editor.
 .formulaire .submit-btn:focus {
 	opacity: 0.9;
 }
+
+@media screen and (max-width:576px){
+    label{
+        font-size: small;
+    }
+}
