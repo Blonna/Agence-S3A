@@ -135,6 +135,145 @@ article.item img
          opacity: 1;
     }
 }
+
+.environnement
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#52D13F;
+    margin: 0;
+    display: row;
+    align-items: center;
+}
+.annonce
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#1C6621;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    opacity:1;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    text-align: justify;
+  
+}
+.annonce h2
+{
+        font-size: 35px;
+        font-family: Montserrat;
+        color: white;
+        margin-top:20px;
+        text-align: center;
+        
+}
+.annonce h3
+{
+        font-size: 60px;
+        font-family: Montserrat;
+        color: #CAD13F;
+        padding-top:10px; 
+        text-align: center;
+}
+.annonce p
+{
+        font-size: 30px;
+        font-family: Montserrat;
+        color: #CAD13F;
+        padding-top:16px; 
+        text-align: center;
+}
+
+.fondations 
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#52D13F;
+    margin: 0;
+    margin-bottom: 20px;
+ }
+.cfondations 
+{
+    max-width: 1000px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#52D13F;
+    margin: 0;
+    display:flex;
+    flex-direction:row;
+    margin-left: 150px;
+    justify-content: space-between;
+}
+#gauche
+{
+    width:300px;
+    height:300px; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#52D13F;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    font-size: 20px;
+    font-family: Montserrat;
+    color: white;
+}
+#milieu
+{
+    width:300px;
+    height:300px; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#52D13F;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    font-size: 20px;
+    font-family: Montserrat;
+    color: white;
+}
+#droite
+{
+    width:300px;
+    height:300px; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#52D13F;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    font-size: 15px;
+    font-family: Montserrat;
+    color: white;
+}
+#gauche img
+{
+    width: 200px;
+    height: 200px;
+    border-radius:100%;
+}
+
+#milieu img
+{
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
+}
+#droite img 
+{
+    width: 200px;
+    height: 200px;
+    border-radius:100%;
+}
+
+
 .aboutus
 {
     max-width: 1300px; /*Largeur du conteneur */
@@ -144,8 +283,9 @@ article.item img
     background:#C5E3ED;
     margin: 0;
     display: row;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     align-items: center;
+    
 }
 .section
 {
@@ -159,7 +299,9 @@ article.item img
     display: flex;
     flex-direction:column;
     margin-bottom: 20px;
+    margin-top:20px;
     text-align: justify;
+    box-shadow: 1px 1px 10px rgba(17,93,125,0.9);
   
 }
 
