@@ -25,6 +25,10 @@ and open the template in the editor.
     font-family: "LeagueSpartan-Bold";
     src: url('polices/LeagueSpartan-Bold.otf') format("truetype");
 }
+@font-face{ 
+    font-family: "Nordic";
+    src: url('polices/Nordic.ttf') format("truetype");
+}
 body {
     display: flex; /* Ce conteneur est "flexible" */
     justify-content: center; /* Les éléments portés sont centrés à l'horizontal */

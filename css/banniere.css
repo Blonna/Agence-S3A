@@ -24,7 +24,7 @@ h1 {
     background:#A8EDDB;
     margin: 0;
     display: row;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     align-items: center;
 }
 .content before,
@@ -135,6 +135,85 @@ article.item img
          opacity: 1;
     }
 }
+.aboutus
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:#C5E3ED;
+    margin: 0;
+    display: row;
+    margin-bottom: 80px;
+    align-items: center;
+}
+.section
+{
+    max-width: 1300px; /*Largeur du conteneur */
+    width:100%;
+    height:auto; /*s'adapte au contenu */  
+    padding:20px;	
+    background:white;
+    opacity:1;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+    text-align: justify;
+  
+}
+
+.section img
+{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding: inherit;
+}
+
+.section img:hover
+{
+    border-radius:100%;
+    float: left;
+    box-shadow: inset 0 0 0 16px rgba(100,200,200,0.8),
+		0 1px 2px rgba(0,0,0,0.7);
+	transition: all 0.4s ease-in-out;
+}
+
+.section h2
+{
+    
+        font-size: 35px;
+        font-family: Montserrat;
+        color: #1C1199;
+        margin-top:40px;
+        text-align: center;
+        margin-left: 500px;
+            
+    
+}
+.section p
+{
+        font-size: 22px;
+        font-family: Arial;
+        color: #244B66;
+        padding-top: 16px;
+        margin-left: 500px;
+}
+
+.section h3
+{
+        font-size: 45px;
+        font-family: DK Lemon Yellow Sun;
+        color: #25417D;
+        margin-top:10px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: 500px;
+}
+
 @media screen and (max-width:576px)
 {
     article.item 
