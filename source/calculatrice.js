@@ -72,14 +72,8 @@ function getPrixVol(classe,lieu,jours)
 {
     return jours<=9? 100*classe*lieu*jours:100*classe*lieu*9;
 }
-/** * Fonction qui retourne un entier depuis une valeur prise dans le DOM * * 
- * @param {String} id * @return {integer} 
- * */
 
-function recupValeur(id) 
-{ 
-    return parseInt(window.document.querySelector(id).value);
-}
+
 /**
  * Avoir le jour d'une date
  * @param {string} id
@@ -111,7 +105,7 @@ function getAn(id)
      return  parseInt(date1[0]) ;
 }
 /**
- * Retourne un entier en fonction d'une option saisie
+ * Retourne un entier en fonction d'une option saisie du control de form
  * @param {string} id
  * @returns {integer} 
  */
@@ -124,7 +118,7 @@ function valuetoInt(id)
         case "Athénes": ret=1; break;
         case "Barcelone":ret=2; break;
         case "Capadoce":ret=3; break;
-        case " Florence": ret=4; break; 
+        case "Florence": ret=4; break; 
         case "Hyeres": ret=1; break;
         case "Îles Lofote": ret=6;break;
         case "Marseille":ret=2;break;
@@ -137,14 +131,62 @@ function valuetoInt(id)
     }
     return ret;
 }
-
+//Fonction principale qui sera exécutée lorsque la page sera chargée et que le bouton de réservation sera cliqué
 window.addEventListener("load", function() {
 window.document.querySelector("#send").addEventListener("click", function() {
            
-           document.getElementbyId("containall").style.opacity="1";
-           document.getElementbyId("containall").style.display="block";
-           document.getElementbyId("btn_close").style.opacity="1";
-           document.getElementbyId("btn_close").style.display="block";
+          
+          let jour_ini=getJour("#datedepart"); //Avoir le jour de la date de depart
+          let mois_ini= getMois ("#datedepart");//Avoir le mois de la date de depart
+          let an_ini=getAn("#datedepart");//Avoir l'an de la date de depart
+          let jour_fin=getJour("#dateretour");//Avoir le jour de la date de retour
+          let mois_fin=getMois ("#dateretour");//Avoir  le mois de la date de retour
+          let an_fin=getAn("#dateretour");//Avoir  l'an de la date de retour
+          let jours= getJours(jour_ini,jour_fin,mois_ini,mois_fin,an_ini,an_fin); //Avoir le nombre des jours total
+          if(jours!==0)
+          {  
+              /* Il rendra la fenêtre pop-up visible */
+                document.getElementById("cont").style.opacity="1";
+                document.getElementById("cont").style.visibility="visible";
+                /*Il rendra visible le bouton permettant de fermer la pop-up */
+                document.getElementById("btn_close").style.opacity="1";
+                document.getElementById("btn_close").style.visibility="visible";
+                               window.document.querySelector("#jours").innerHTML = jours;//affiche le résultat des jours calculés avec la fonction getJours
+                  let nuits=getNuits(jours); //calculer le nombre de nuits avec la fonction getNuits
+                     window.document.querySelector("#nuits").innerHTML = nuits; //affiche le résultat des nuits calculées avec la fonction getNuits
+                     /*A partir de maintenant, la même procédure est suivie les résultats sont affichés dans la fenêtre pop-up*/
+                  let lieu=window.document.querySelector("#arrivees").value;
+                      window.document.querySelector("#lieu").innerHTML = lieu;
+                      window.document.querySelector("#arrivee").innerHTML = lieu;
+                  let prixhotel =getPrixHotel(valuetoInt("#arrivees"),nuits);
+                      window.document.querySelector("#prixhotel ").innerHTML =  prixhotel +" €";
+                  let transport= getTransport(valuetoInt("#arrivees"));
+                      window.document.querySelector("#prixtrans ").innerHTML = transport +" €";
+                  let prixvol=getPrixVol(valuetoInt("#classe"),valuetoInt("#arrivees"),jours);
+                  let depart=window.document.querySelector("#departs").value;
+                      window.document.querySelector("#depart ").innerHTML = depart;
+                      window.document.querySelector("#prixvol ").innerHTML = prixvol +" €";
+                   let adultes=parseInt(window.document.querySelector("#adultes").value);
+                   let enfants=parseInt(window.document.querySelector("#enfants").value);
+                  var prix= prixhotel +transport+prixvol;
+                        window.document.querySelector("#adulte").innerHTML = prix+" €";
+                        if(enfants!==0)
+                        window.document.querySelector("#enfant").innerHTML = ( prix*0.7) +" €";
+                    else 
+                         window.document.querySelector("#enfant").innerHTML = 0;
+                        window.document.querySelector("#prixtotal").innerHTML = ( (prix*0.7*enfants)+(prix*adultes)) +" €";
+                      
+                        
+          } else 
+          {
+              /*Si le format de la date est incorrect, créera un objet HTML de type h2 dans la section date pour indiquer à l'utilisateur qu'il a fait une erreur. */
+              const datesform=document.getElementById("datesform");
+              let newH2Item=document.createElement('h2');
+              /*Contenu du message*/
+              newH2Item.textContent= 'Date non valable, ne peut pas dépasser 31 jours, essayez à nouveau. ';
+              datesform.appendChild(newH2Item);
+    
+    }
    }); 
    
 });
