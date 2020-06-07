@@ -70,5 +70,81 @@ function getTransport(lieu)
  */
 function getPrixVol(classe,lieu,jours)
 {
-    return 100*classe*lieu*jours;
+    return jours<=9? 100*classe*lieu*jours:100*classe*lieu*9;
 }
+/** * Fonction qui retourne un entier depuis une valeur prise dans le DOM * * 
+ * @param {String} id * @return {integer} 
+ * */
+
+function recupValeur(id) 
+{ 
+    return parseInt(window.document.querySelector(id).value);
+}
+/**
+ * Avoir le jour d'une date
+ * @param {string} id
+ * @returns {integer} jour 1 -31
+ */
+function getJour(id)
+{
+     var date1=new Date(window.document.querySelector(id).value);
+     return date1.getDate();
+}
+/**
+ * Avoir le mois d'une date
+ * @param {string} id
+ * @returns {integer} mois entre 1-12
+ */
+function getMois (id)
+{
+     var date1=new Date(window.document.querySelector(id).value);
+     return date1.getMonth()+1;
+}
+/**
+ * Avoir l'an d'une date
+ * @param {string} id
+ * @returns {integer} year 0000 a 9999
+ */
+function getAn(id)
+{
+     var date1= window.document.querySelector(id).value.split("-");
+     return  parseInt(date1[0]) ;
+}
+/**
+ * Retourne un entier en fonction d'une option saisie
+ * @param {string} id
+ * @returns {integer} 
+ */
+function valuetoInt(id)
+{
+    var name= window.document.querySelector(id).value;
+    var ret=0;
+    switch(name)
+    {
+        case "Athénes": ret=1; break;
+        case "Barcelone":ret=2; break;
+        case "Capadoce":ret=3; break;
+        case " Florence": ret=4; break; 
+        case "Hyeres": ret=1; break;
+        case "Îles Lofote": ret=6;break;
+        case "Marseille":ret=2;break;
+        case "Rome":ret=8; break;
+        case "Nice": ret=3; break;
+        case "Première classe": ret=3; break;
+        case "Classe affaire": ret=2; break;
+         case "Classe économique": ret=1; break;
+           
+    }
+    return ret;
+}
+
+window.addEventListener("load", function() {
+window.document.querySelector("#send").addEventListener("click", function() {
+           
+           document.getElementbyId("containall").style.opacity="1";
+           document.getElementbyId("containall").style.display="block";
+           document.getElementbyId("btn_close").style.opacity="1";
+           document.getElementbyId("btn_close").style.display="block";
+   }); 
+   
+});
